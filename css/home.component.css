@@ -1,0 +1,95 @@
+.filters {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding-left: 20px;
+}
+
+::ng-deep .mdc-text-field--filled {
+  background-color: #3f51b5;
+}
+::ng-deep .mat-select-value,
+::ng-deep .mat-select-arrow,
+::ng-deep .mat-form-field-hide-placeholder,
+::ng-deep .mat-select-placeholder {
+  color: #fff !important;
+  opacity: 1;
+}
+::ng-deep .mat-form-field-infix {
+  border-color: #fff !important;
+  border-top: none;
+  padding-left: 5px !important;
+}
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+  padding-left: 5px;
+}
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: #fff !important;
+}
+
+.game {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.game__container {
+  width: 280px;
+  margin: 10px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #202020;
+  cursor: pointer;
+}
+.game__container:hover {
+  box-shadow: 4px 3px 11px 6px rgb(200, 152, 255);
+  transform: translateY(-3px);
+}
+.game__img {
+  background-color: #000;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  width: 280px;
+  height: 172px;
+}
+.game__img img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.game__content {
+  height: 172px;
+}
+.game__description {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.game__name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.game__platforms {
+  display: flex;
+  flex-direction: row;
+}
+.game__platforms img {
+  width: 20px;
+  margin-right: 10px;
+  padding-bottom: 20px;
+}

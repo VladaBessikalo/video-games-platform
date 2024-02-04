@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/ng-video-games-db/files",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

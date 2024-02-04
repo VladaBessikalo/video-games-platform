@@ -1,0 +1,52 @@
+<div class="details" *ngIf="(gameService.selectedGame$ | async) as selectedGame">
+    <div class="details__banner">
+        <img [src]="selectedGame.background_image" alt="background-image" class="details__banner-img">
+    </div>
+    <div class="details__content">
+        <div class="details__wrapper">
+            <div class="details__header">
+                <h2 class="details__title">
+                    {{ selectedGame.name }}
+                </h2>
+                <h3 class="details__release">
+                    Release: {{ selectedGame.released | date }}
+                </h3>
+                <p class="details__genre">
+                    <span *ngFor="let genre of selectedGame.genres"> {{ genre.name }} </span>
+                </p>
+                <div class="details__gauge">
+                    <mwl-gauge
+                        class="details__gauge-tag"
+                        [max]="100"
+                        [dialStartAngle]="180"
+                        [dialEndAngle]="0"
+                        [value]="gameRating"
+                        [animated]="true"
+                        [color]="getColor"
+                        [animationDuration]="2" 
+                    >
+                    </mwl-gauge>
+                    <a 
+                        [href]="selectedGame.metacritic_url" 
+                        class="details__label"
+                        target="_blank"
+                    >
+                        Metacritic
+                    </a>
+                </div>
+            </div>
+            <!-- here will go tabs -->
+        </div>
+    </div>
+    <div class="details__info">
+        <div class="details__playtime">Playtime: {{ selectedGame.playtime }} hours</div>
+        <div class="details__platforms"> Available platforms: 
+            <a href="#">
+                <img [src]="'../../../assets/' + platform.platform.name + '.svg'" *ngFor="let platform of selectedGame.parent_platforms" [alt]="platform.platform.name">
+            </a>
+        </div>
+    </div>
+    <div class="details__screenshorts" > 
+        <img *ngFor="let screenshort of selectedGame.short_screenshots" [src]="screenshort.image" alt="screenshort">
+    </div>
+</div>
