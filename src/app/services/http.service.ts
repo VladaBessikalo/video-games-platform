@@ -9,7 +9,7 @@ import { APIResponse, Game } from '../models';
 })
 export class HttpService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getGameList(ordering: string, search?: string): Observable<APIResponse<Game>> {
     let params = new HttpParams().set('ordering', ordering);
